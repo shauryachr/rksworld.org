@@ -3,7 +3,1438 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Rajeev Kumar Chauhan - Professional Profile</title><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Rajeev Kumar Chauhan - Professional Profile</title>
+    <meta name="description" content="Assistant Professor at DEI, expert in DC Microgrids, Power Systems, and Renewable Energy with 50+ publications">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.27/dist/lenis.min.js"></script>
+    <style>
+        /* Prabodh Style - Consistent Black & White */
+        /* Chillax Font Import */
+        @font-face {
+          font-family: 'Chillax-Regular';
+          src: url('Chillax/Fonts/WEB/fonts/Chillax-Regular.woff2') format('woff2'),
+               url('Chillax/Fonts/WEB/fonts/Chillax-Regular.woff') format('woff'),
+               url('Chillax/Fonts/WEB/fonts/Chillax-Regular.ttf') format('truetype');
+          font-weight: 400;
+          font-display: swap;
+          font-style: normal;
+        }
+        
+        body {
+            font-family: 'Chillax-Regular', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            color: #000000;
+            letter-spacing: -0.02em;
+            max-width: 800px;
+            text-align: center;
+        }
+        
+        /* Navigation Scroll Effects */
+        .nav-link {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #000000;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::before {
+            width: 100%;
+        }
+        
+        /* Hero Buttons Scroll Effects */
+        .btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary {
+            background: #000000;
+            color: #ffffff;
+            border: 1px solid #000000;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            letter-spacing: -0.01em;
+        }
+        
+        .btn-primary:hover {
+            background: #ffffff;
+            color: #000000;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #000000;
+            border: 1px solid #000000;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            letter-spacing: -0.01em;
+        }
+        
+        .btn-secondary:hover {
+            background: #000000;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* User Scroll Effects */
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .stat-card {
+            background: #ffffff;
+            border: 2px solid #000000;
+            border-radius: 0;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .stat-card:hover::before {
+            left: 100%;
+        }
+        
+        .stat-card:hover {
+            background: #000000;
+            color: #ffffff;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+        
+        .stat-label {
+            color: #000000;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            line-height: 1.3;
+        }
+        
+        .stat-card:hover .stat-number,
+        .stat-card:hover .stat-label {
+            color: #ffffff;
+        }
+        
+        .publications-section {
+            max-height: 600px;
+            overflow-y: auto;
+            padding-right: 1rem;
+        }
+        
+        .publication-item {
+            background: #ffffff;
+            border: 1px solid #000000;
+            border-radius: 0;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.2s ease;
+        }
+        
+        .publication-item:hover {
+            background: #000000;
+            color: #ffffff;
+        }
+        
+        .publication-title {
+            color: #000000;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        .publication-meta {
+            color: #000000;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .publication-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .tag {
+            background: #000000;
+            color: #ffffff;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .publication-item:hover .publication-title,
+        .publication-item:hover .publication-meta,
+        .publication-item:hover .tag {
+            color: #ffffff;
+        }
+        
+        .experience-timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #000000;
+        }
+        
+        .experience-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #000000;
+            border: 2px solid #ffffff;
+        }
+        
+        .award-card {
+            background: #ffffff;
+            border: 1px solid #000000;
+            border-radius: 0;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 
+                0 8px 32px rgba(255, 215, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+        
+        .award-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.1), 
+                transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+            opacity: 0;
+        }
+        
+        .award-card:hover::before {
+            opacity: 1;
+            animation: shimmer 2s ease-in-out;
+        }
+        
+        .award-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            background: linear-gradient(135deg, 
+                rgba(255, 215, 0, 0.12) 0%, 
+                rgba(255, 193, 7, 0.06) 50%, 
+                rgba(255, 235, 59, 0.03) 100%);
+            border-color: rgba(255, 215, 0, 0.3);
+            box-shadow: 
+                0 20px 40px rgba(255, 215, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+        
+        .award-year {
+            color: #FFD700;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        
+        .award-title {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        
+        .award-org {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.85rem;
+        }
+        
+        .qualification-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .qualification-card {
+            background: #ffffff;
+            border: 1px solid #000000;
+            border-radius: 0;
+            padding: 2rem;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+        
+        .qualification-card:hover {
+            background: #000000;
+            color: #ffffff;
+        }
+        
+        .qualification-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #000000;
+        }
+        
+        .qualification-degree {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 0.5rem;
+        }
+        
+        .qualification-institution {
+            color: #000000;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .qualification-year {
+            color: #000000;
+            font-size: 0.9rem;
+        }
+        
+        .qualification-card:hover .qualification-degree,
+        .qualification-card:hover .qualification-institution,
+        .qualification-card:hover .qualification-year {
+            color: #ffffff;
+        }
+        
+        /* Hero Visual Elements */
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-top: 3rem;
+        }
+        
+        .tech-showcase {
+            display: flex;
+            gap: 2rem;
+            position: relative;
+        }
+        
+        .floating-element {
+            background: #ffffff;
+            border: 2px solid #000000;
+            border-radius: 50px;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.3s ease;
+            position: relative;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .floating-element:hover {
+            background: #000000;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .floating-element i {
+            font-size: 1.25rem;
+            color: #000000;
+            transition: all 0.3s ease;
+        }
+        
+        .floating-element span {
+            color: #000000;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: -0.01em;
+            transition: all 0.3s ease;
+        }
+        
+        .floating-element:hover i,
+        .floating-element:hover span {
+            color: #ffffff;
+        }
+        
+        /* Gallery Section - Prabodh Style */
+        .gallery {
+            background: #ffffff;
+            padding: 120px 0;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .gallery-item {
+            background: #ffffff;
+            border: 1px solid #000000;
+            border-radius: 0;
+            overflow: hidden;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+        
+        .gallery-item:hover {
+            background: #000000;
+            color: #ffffff;
+        }
+        
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-image img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-caption {
+            padding: 1.5rem;
+            text-align: left;
+        }
+        
+        .gallery-caption h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+        
+        .gallery-caption p {
+            color: #000000;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+        
+        .gallery-item:hover .gallery-caption h3,
+        .gallery-item:hover .gallery-caption p {
+            color: #ffffff;
+        }
+        
+        /* Professional Activities Section - Prabodh Style */
+        .professional-activities {
+            background: #ffffff;
+            padding: 120px 0;
+        }
+        
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .activity-card {
+            background: #ffffff;
+            border: 1px solid #000000;
+            border-radius: 0;
+            padding: 2rem;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+        
+        .activity-card:hover {
+            background: #000000;
+            color: #ffffff;
+        }
+        
+        .activity-icon {
+            width: 60px;
+            height: 60px;
+            background: #ffffff;
+            border: 1px solid #000000;
+            border-radius: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            transition: all 0.2s ease;
+        }
+        
+        .activity-card:hover .activity-icon {
+            background: #000000;
+            border-color: #ffffff;
+        }
+        
+        .activity-icon i {
+            font-size: 1.5rem;
+            color: #000000;
+            transition: all 0.2s ease;
+        }
+        
+        .activity-card:hover .activity-icon i {
+            color: #ffffff;
+        }
+        
+        .activity-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+        
+        .activity-card p {
+            color: #000000;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        
+        .activity-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .activity-card li {
+            color: #000000;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+        
+        .activity-card li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #000000;
+            font-weight: bold;
+        }
+        
+        .activity-card:hover h3,
+        .activity-card:hover p,
+        .activity-card:hover li {
+            color: #ffffff;
+        }
+        
+        .activity-card:hover li::before {
+            color: #ffffff;
+        }
+        
+        /* Fix hero section positioning */
+        .hero {
+            position: relative;
+            z-index: 1;
+            margin-top: 120px;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 3px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #000000;
+            border-radius: 3px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .qualification-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .experience-timeline {
+                padding-left: 1rem;
+            }
+            
+            .tech-showcase {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .floating-element {
+                padding: 0.75rem 1rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .gallery-image {
+                height: 200px;
+            }
+            
+            .activities-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .activity-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+    
+    <!-- Parallax Background -->
+    <div class="parallax-bg"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Dr. Rajeev Kumar Chauhan</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#overview" class="nav-link">Overview</a></li>
+                <li><a href="#qualifications" class="nav-link">Qualifications</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#professional-activities" class="nav-link">Activities</a></li>
+                <li><a href="#awards" class="nav-link">Awards</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero visible">
+        <div class="section-bg"></div>
+        <div class="hero-content">
+            <div class="hero-text fade-in-up visible">
+                <h1 class="hero-title reveal-text visible">Dr. Rajeev Kumar Chauhan</h1>
+                <p class="hero-subtitle reveal-text visible">Assistant Professor | Power Systems Expert | Research Innovator</p>
+                <p class="hero-description reveal-text visible">
+                    Leading researcher in DC Microgrids and Power Systems with 50+ publications 
+                    and international research experience at University of Manchester, UK.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-card stagger-item scale-in visible">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Publications</div>
+                    </div>
+                    <div class="stat-card stagger-item scale-in visible">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card stagger-item scale-in visible">
+                        <div class="stat-number">6.7</div>
+                        <div class="stat-label">Max Impact Factor</div>
+                    </div>
+                    <div class="stat-card stagger-item scale-in visible">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Awards</div>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons reveal-text visible">
+                    <a href="#publications" class="btn btn-primary">View Publications</a>
+                    <a href="#gallery" class="btn btn-secondary">Gallery</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual fade-in-right visible">
+                <div class="tech-showcase">
+                    <div class="floating-element">
+                        <i class="fas fa-bolt"></i>
+                        <span>DC Microgrid</span>
+                    </div>
+                    <div class="floating-element">
+                        <i class="fas fa-microchip"></i>
+                        <span>Power Systems</span>
+                    </div>
+                    <div class="floating-element">
+                        <i class="fas fa-leaf"></i>
+                        <span>Renewable Energy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="about visible">
+        <div class="section-bg"></div>
+        <div class="container">
+            <h2 class="section-title fade-in-up visible">Professional Overview</h2>
+            <div class="about-content">
+                <div class="about-text fade-in-left visible">
+                    <p class="reveal-text visible">
+                        Dr. Rajeev Kumar Chauhan is a distinguished academic and researcher serving as 
+                        Assistant Professor at Dayalbagh Educational Institute, Agra. With a robust 
+                        background in electrical engineering and power systems, he has established himself 
+                        as a leading expert in DC microgrids, renewable energy integration, and smart grid technologies.
+                    </p>
+                    <p class="reveal-text visible">
+                        His previous role as Research Scientist at the University of Manchester, United Kingdom, 
+                        has provided him with international research exposure and collaborative experience. 
+                        Dr. Chauhan's work focuses on developing innovative solutions for sustainable energy 
+                        systems, with particular emphasis on DC microgrid architectures, building automation, 
+                        and advanced power system control strategies.
+                    </p>
+                    <p class="reveal-text visible">
+                        As a Senior Member of IEEE and member of IACSIT, Singapore, he actively contributes 
+                        to the academic community through peer review, editorial work, and conference organization. 
+                        His research has been recognized with numerous prestigious awards including the POSOCO 
+                        Power System Award and IEEE UP Section Young Professional Star Award.
+                    </p>
+                </div>
+                <div class="about-highlights fade-in-right visible">
+                    <div class="highlight-item stagger-item visible">
+                        <i class="fas fa-university"></i>
+                        <h3>Current Position</h3>
+                        <p>Assistant Professor<br>Dayalbagh Educational Institute</p>
+                    </div>
+                    <div class="highlight-item stagger-item visible">
+                        <i class="fas fa-globe"></i>
+                        <h3>International Experience</h3>
+                        <p>Former Research Scientist<br>University of Manchester, UK</p>
+                    </div>
+                    <div class="highlight-item stagger-item visible">
+                        <i class="fas fa-award"></i>
+                        <h3>Key Recognition</h3>
+                        <p>POSOCO Power System Award<br>IEEE Young Professional Star</p>
+                    </div>
+                    <div class="highlight-item stagger-item visible">
+                        <i class="fas fa-users"></i>
+                        <h3>Professional Memberships</h3>
+                        <p>Senior Member IEEE<br>IACSIT Member</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualifications Section -->
+    <section id="qualifications" class="qualifications">
+        <div class="container">
+            <h2 class="section-title">Academic Qualifications</h2>
+            <div class="qualification-grid">
+                <div class="qualification-card">
+                    <h3 class="qualification-degree">Ph.D. in Electrical Engineering</h3>
+                    <p class="qualification-institution">Indian Institute of Technology Mandi</p>
+                    <p class="qualification-institution">School of Computing and Electrical Engineering</p>
+                    <p class="qualification-year">2017</p>
+                </div>
+                
+                <div class="qualification-card">
+                    <h3 class="qualification-degree">M.Tech in Control & Instrumentation</h3>
+                    <p class="qualification-institution">Dr. B. R. Ambedkar National Institute of Technology</p>
+                    <p class="qualification-institution">Department of Control and Instrumentation Engineering</p>
+                    <p class="qualification-year">2009</p>
+                </div>
+                
+                <div class="qualification-card">
+                    <h3 class="qualification-degree">A.M.I.E. in Electrical Engineering</h3>
+                    <p class="qualification-institution">The Institution of Engineers (India)</p>
+                    <p class="qualification-institution">Department of Electrical Engineering</p>
+                    <p class="qualification-year">2007</p>
+                </div>
+                
+                <div class="qualification-card">
+                    <h3 class="qualification-degree">Diploma in Engineering</h3>
+                    <p class="qualification-institution">Government Polytechnic Rampur</p>
+                    <p class="qualification-institution">Uttar Pradesh Board of Technical Education</p>
+                    <p class="qualification-year">2003</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Interests Section -->
+    <section id="research" class="research">
+        <div class="container">
+            <h2 class="section-title">Research Interests & Expertise</h2>
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>DC Microgrid Systems</h3>
+                    <p>Advanced research in DC microgrid architecture, control strategies, and implementation for residential and commercial applications</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Building Automation</h3>
+                    <p>Smart building energy management systems, automated control, and optimization for energy efficiency and cost reduction</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>System Development</h3>
+                    <p>Integration and development of complex power system architectures with focus on reliability and performance optimization</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <h3>Weak Grid Integration</h3>
+                    <p>Innovative solutions for renewable energy integration into weak grid systems with stability and reliability focus</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Microgrid Management</h3>
+                    <p>Remote and microgrid control systems with advanced protection and fault detection mechanisms</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Power System Control</h3>
+                    <p>Advanced control systems for power grid stability, voltage regulation, and frequency control in modern power systems</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Microgrid Protection</h3>
+                    <p>Intelligent protection systems for fault identification and localization in multi-terminal DC microgrids</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Smart Grid Technologies</h3>
+                    <p>Cutting-edge research in smart grid control, stability analysis, and next-generation power system technologies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="publications">
+        <div class="container">
+            <h2 class="section-title">Selected Publications</h2>
+            <div class="publications-section custom-scrollbar">
+                <div class="publication-item">
+                    <h3 class="publication-title">Modelling of Multi-Phase Interleaved based Universal Charging Port for Electric Vehicles</h3>
+                    <p class="publication-meta">V. Amoriya, R. K. Chauhan, S. Mittal, et al.</p>
+                    <p class="publication-meta">Smart Grids and Sustainable Energy, Springer, vol. 9, no. 19, pp. 1-16, March 2024</p>
+                    <div class="publication-tags">
+                        <span class="tag">IF: 2.67</span>
+                        <span class="tag">Q2 Journal</span>
+                        <span class="tag">SCI Indexed</span>
+                    </div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">An Algorithmic based Energy Sharing Model with Peer to Peer Energy Trading</h3>
+                    <p class="publication-meta">A.G. Singh, and R.K. Chauhan</p>
+                    <p class="publication-meta">Journal of Building Engineering, Elsevier, vol. 76, pp. 106960, Oct. 2023</p>
+                    <div class="publication-tags">
+                        <span class="tag">IF: 6.7</span>
+                        <span class="tag">Q1 Journal</span>
+                        <span class="tag">SCI Indexed</span>
+                    </div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">Optimization of Electrical Energy Waste in House Using Smart Appliances Management System</h3>
+                    <p class="publication-meta">R. K. Chauhan, K. Chauhan, and A.Q.H. Badar</p>
+                    <p class="publication-meta">Journal of Building Engineering, Elsevier, vol. 46, no.1, pp. 103595, April 2022</p>
+                    <div class="publication-tags">
+                        <span class="tag">IF: 6.7</span>
+                        <span class="tag">Q1 Journal</span>
+                        <span class="tag">SCI Indexed</span>
+                    </div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">Smart Protection System for Identification and Localization of Faults in Multi-Terminal DC Microgrid</h3>
+                    <p class="publication-meta">R. K. Chauhan, and K. Chauhan</p>
+                    <p class="publication-meta">IET Smart Grid, vol.5, no.3, pp. 1-8, Nov. 2020</p>
+                    <div class="publication-tags">
+                        <span class="tag">IF: 2.3</span>
+                        <span class="tag">Q1 Journal</span>
+                        <span class="tag">SCI Indexed</span>
+                    </div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">Building Automation System for Grid-Connected Home to Optimize Energy Consumption</h3>
+                    <p class="publication-meta">R. K. Chauhan, and K. Chauhan</p>
+                    <p class="publication-meta">Journal of Building Engineering, Elsevier, vol. 21, pp.409-420, January 2019</p>
+                    <div class="publication-tags">
+                        <span class="tag">IF: 6.4</span>
+                        <span class="tag">Q1 Journal</span>
+                        <span class="tag">SCI Indexed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/400x300/000000/ffffff?text=Research+Lab" alt="Research Lab">
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Research Laboratory</h3>
+                        <p>Advanced power systems research facility</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/400x300/000000/ffffff?text=Conference" alt="Conference">
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>International Conference</h3>
+                        <p>Presenting research at global forums</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/400x300/000000/ffffff?text=Teaching" alt="Teaching">
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Academic Teaching</h3>
+                        <p>Engaging students in power systems</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/400x300/000000/ffffff?text=Collaboration" alt="Collaboration">
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Research Collaboration</h3>
+                        <p>Working with international partners</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/400x300/000000/ffffff?text=Innovation" alt="Innovation">
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Innovation Projects</h3>
+                        <p>Developing cutting-edge solutions</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/400x300/000000/ffffff?text=Awards" alt="Awards">
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Achievements</h3>
+                        <p>Recognition for research excellence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="timeline-content">
+                        <h3>Assistant Professor</h3>
+                        <h4>Dayalbagh Educational Institute, Agra</h4>
+                        <p>December 2019 - Present</p>
+                        <p>Teaching and research in electrical engineering with focus on power systems and DC microgrids.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="timeline-content">
+                        <h3>Assistant Professor</h3>
+                        <h4>Galgotias College of Engineering and Technology, Greater Noida</h4>
+                        <p>July 2017 - December 2019</p>
+                        <p>Academic teaching and research responsibilities in electrical engineering.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="timeline-content">
+                        <h3>Visiting Scientist</h3>
+                        <h4>University of Texas at Austin, USA</h4>
+                        <p>July - October 2014</p>
+                        <p>Research collaboration on advanced electromechanical systems and power technologies.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="timeline-content">
+                        <h3>Research Scientist</h3>
+                        <h4>University of Manchester, United Kingdom</h4>
+                        <p>Previous Position</p>
+                        <p>Advanced research in electrical engineering and power systems with international collaboration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Activities Section -->
+    <section id="professional-activities" class="professional-activities visible">
+        <div class="section-bg"></div>
+        <div class="container">
+            <h2 class="section-title fade-in-up visible">Professional Activities & Committees</h2>
+            <div class="activities-grid">
+                <div class="activity-card stagger-item fade-in-left visible">
+                    <div class="activity-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>BIS Committee Member</h3>
+                    <p>Active member of Bureau of Indian Standards (BIS) committees for electrical engineering and power systems standards development.</p>
+                    <ul>
+                        <li>Participating in national standards formulation</li>
+                        <li>Technical expert for power system equipment standards</li>
+                        <li>Contributing to safety and performance guidelines</li>
+                    </ul>
+                </div>
+                
+                <div class="activity-card stagger-item fade-in-right visible">
+                    <div class="activity-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3>Technical Reviewer</h3>
+                    <p>Serving as technical reviewer for prestigious international journals and conferences in electrical engineering.</p>
+                    <ul>
+                        <li>IEEE Transactions on Power Systems</li>
+                        <li>IEEE Transactions on Smart Grid</li>
+                        <li>International Journal of Electrical Power & Energy Systems</li>
+                    </ul>
+                </div>
+                
+                <div class="activity-card stagger-item fade-in-left visible">
+                    <div class="activity-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Conference Committee</h3>
+                    <p>Active involvement in organizing and technical committees for national and international conferences.</p>
+                    <ul>
+                        <li>Technical Program Committee member</li>
+                        <li>Session chair for power systems tracks</li>
+                        <li>Reviewer for paper submissions</li>
+                    </ul>
+                </div>
+                
+                <div class="activity-card stagger-item fade-in-right visible">
+                    <div class="activity-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Academic Collaborations</h3>
+                    <p>Engaged in collaborative research and academic partnerships with leading institutions.</p>
+                    <ul>
+                        <li>Research collaboration with University of Manchester, UK</li>
+                        <li>Visiting researcher at University of Texas at Austin, USA</li>
+                        <li>Joint projects with national research laboratories</li>
+                    </ul>
+                </div>
+                
+                <div class="activity-card stagger-item fade-in-left visible">
+                    <div class="activity-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Industry Consultations</h3>
+                    <p>Providing expert consultation to industry partners on power system implementations.</p>
+                    <ul>
+                        <li>DC microgrid design consulting</li>
+                        <li>Renewable integration advisory</li>
+                        <li>Power quality assessment services</li>
+                    </ul>
+                </div>
+                
+                <div class="activity-card stagger-item fade-in-right visible">
+                    <div class="activity-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Editorial Activities</h3>
+                    <p>Contributing to academic publishing through editorial and review work.</p>
+                    <ul>
+                        <li>Guest editor for special issues</li>
+                        <li>Editorial board member</li>
+                        <li>Book chapter contributions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="awards">
+        <div class="container">
+            <h2 class="section-title">Awards and Recognition</h2>
+            <div class="awards-list">
+                <div class="award-card">
+                    <div class="award-year">2022</div>
+                    <h3 class="award-title">Bharat Shiksha Gaurav Puraskar</h3>
+                    <p class="award-org">KTK Outstanding Achievers and Education Foundation</p>
+                    <p class="award-org">For contributions in the field of education</p>
+                </div>
+                
+                <div class="award-card">
+                    <div class="award-year">2021</div>
+                    <h3 class="award-title">IEEE UP Section Young Professional Star Award</h3>
+                    <p class="award-org">IEEE Uttar Pradesh Section</p>
+                    <p class="award-org">Award of the Month, September 2021</p>
+                </div>
+                
+                <div class="award-card">
+                    <div class="award-year">2017</div>
+                    <h3 class="award-title">Best PhD Thesis Award</h3>
+                    <p class="award-org">IEEE UPCON</p>
+                    <p class="award-org">For "Design and Performance Analysis of Multiterminal DC Microgrid"</p>
+                </div>
+                
+                <div class="award-card">
+                    <div class="award-year">2017</div>
+                    <h3 class="award-title">POSOCO Power System Award</h3>
+                    <p class="award-org">Power System Operation Corporation Limited</p>
+                    <p class="award-org">For outstanding contribution to power system research</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Information</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>rajeevnitj@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Department of Electrical Engineering<br>Dayalbagh Educational Institute<br>Agra, Uttar Pradesh, India</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="http://rksworld.org/uploads/image/Rajeev_CV.pdf" target="_blank">Download Complete CV</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        
+                        <a href="http://rksworld.org" target="_blank">Visit Research Portal</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/rajeev-kumar-chauhan" target="_blank">LinkedIn Profile</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <a href="https://scholar.google.com/citations?user=RajeevKumarChauhan" target="_blank">Google Scholar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Dr. Rajeev Kumar Chauhan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll Effects JavaScript -->
+    <script>
+        // Initialize Lenis smooth scrolling
+        const lenis = new Lenis({
+            duration: 2.5,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 0.7,
+            smoothTouch: false,
+            touchMultiplier: 1.2,
+            infinite: false,
+            wheelMultiplier: 0.8,
+            normalizeWheel: true,
+        });
+
+        // Connect Lenis to requestAnimationFrame
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // Enhanced Scroll Progress Bar
+        lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
+            const scrollPercent = progress * 100;
+            document.querySelector('.scroll-progress').style.width = scrollPercent + '%';
+            
+            // Enhanced parallax based on scroll velocity
+            const parallaxBg = document.querySelector('.parallax-bg');
+            const velocityFactor = Math.min(Math.abs(velocity) * 0.5, 2);
+            parallaxBg.style.transform = `translateY(${scroll * 0.4}px) scale(${1 + velocityFactor * 0.01})`;
+        });
+
+        // Navigation Scroll Effect with Velocity
+        lenis.on('scroll', ({ scroll, velocity }) => {
+            const navbar = document.querySelector('.navbar');
+            if (scroll > 50) {
+                navbar.classList.add('scrolled');
+                // Add subtle blur based on velocity
+                if (Math.abs(velocity) > 1) {
+                    navbar.style.backdropFilter = 'blur(8px)';
+                } else {
+                    navbar.style.backdropFilter = 'blur(4px)';
+                }
+            } else {
+                navbar.classList.remove('scrolled');
+                navbar.style.backdropFilter = 'blur(0px)';
+            }
+        });
+
+        // Enhanced Intersection Observer with Staggered Animations
+        const observerOptions = {
+            threshold: [0, 0.1, 0.5, 1],
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Stagger animation based on entry order
+                    const delay = entry.target.dataset.stagger ? entry.target.dataset.stagger * 100 : 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, delay);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animation classes
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .scale-in, .reveal-text, .stagger-item, section');
+            
+            // Add stagger data to elements
+            animatedElements.forEach((el, index) => {
+                if (el.classList.contains('stagger-item')) {
+                    el.dataset.stagger = index % 4; // Create stagger pattern
+                }
+            });
+            
+            animatedElements.forEach(el => observer.observe(el));
+        });
+
+        // Enhanced Scroll Indicator with Easing
+        document.querySelector('.scroll-indicator').addEventListener('click', () => {
+            lenis.scrollTo('#overview', {
+                offset: -100,
+                easing: (t) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t,
+                duration: 1.5
+            });
+        });
+
+        // Enhanced Gallery Image Parallax with Mouse Interaction
+        lenis.on('scroll', ({ scroll }) => {
+            const galleryImages = document.querySelectorAll('.gallery-image img');
+            galleryImages.forEach((img, index) => {
+                const rect = img.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    const speed = 0.3 + (index * 0.1);
+                    const yPos = -(scroll * speed);
+                    const rotation = scroll * 0.02 * (index % 2 === 0 ? 1 : -1);
+                    img.style.transform = `translateY(${yPos}px) rotate(${rotation}deg)`;
+                }
+            });
+        });
+
+        // Smooth scroll for navigation links using Lenis with enhanced easing
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    lenis.scrollTo(target, {
+                        offset: -80,
+                        easing: (t) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3),
+                        duration: 2.0
+                    });
+                }
+            });
+        });
+
+        // Enhanced Card hover effects with 3D rotation and mouse tracking
+        document.querySelectorAll('.stat-card, .research-card, .publication-item, .award-card, .gallery-item, .activity-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                const rotateZ = ((x - centerX) / 50) * Math.sin(Date.now() * 0.001);
+                
+                card.style.transform = 'perspective(1000px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) rotateZ(' + rotateZ + 'deg) translateZ(20px) scale(1.05)';
+                card.style.boxShadow = -rotateY + 'px ' + rotateX + 'px 30px rgba(0, 0, 0, 0.2)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) rotateZ(0) translateZ(0) scale(1)';
+                card.style.boxShadow = 'none';
+            });
+        });
+
+        // Scroll-based reveal animations
+        let lastScrollY = 0;
+        lenis.on('scroll', ({ scroll }) => {
+            const scrollDirection = scroll > lastScrollY ? 'down' : 'up';
+            const scrollSpeed = Math.abs(scroll - lastScrollY);
+            
+            // Add scroll direction-based classes
+            document.body.setAttribute('data-scroll-direction', scrollDirection);
+            document.body.setAttribute('data-scroll-speed', scrollSpeed > 5 ? 'fast' : 'slow');
+            
+            lastScrollY = scroll;
+        });
+    </script>
+</body>
+</html>
+
     <meta name="description" content="Assistant Professor at DEI, expert in DC Microgrids, Power Systems, and Renewable Energy with 50+ publications">
     <link rel="stylesheet" href="portfolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
