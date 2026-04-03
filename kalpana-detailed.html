@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Kalpana Chauhan - Professional Profile</title>
     <meta name="description" content="Assistant Professor at Central University of Haryana, expert in Medical Image Processing, Cardiac Disease Diagnosis, and Smart Grid Technologies with extensive international research experience">
-    <link rel="stylesheet" href="portfolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.27/dist/lenis.min.js"></script>
     <style>
@@ -2382,8 +2381,8 @@
                 const rotateY = (centerX - x) / 10;
                 const rotateZ = ((x - centerX) / 50) * Math.sin(Date.now() * 0.001);
                 
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg) translateZ(20px) scale(1.05)`;
-                card.style.boxShadow = `${-rotateY}px ${rotateX}px 30px rgba(0, 0, 0, 0.2)`;
+                card.style.transform = 'perspective(1000px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) rotateZ(' + rotateZ + 'deg) translateZ(20px) scale(1.05)';
+                card.style.boxShadow = -rotateY + 'px ' + rotateX + 'px 30px rgba(0, 0, 0, 0.2)';
             });
             
             card.addEventListener('mouseleave', () => {
