@@ -25,38 +25,156 @@
             font-family: 'Chillax-Regular', -apple-system, BlinkMacSystemFont, sans-serif;
         }
         
+        .hero-title {
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            color: #000000;
+            letter-spacing: -0.02em;
+            max-width: 800px;
+            text-align: center;
+        }
+        
+        /* Navigation Scroll Effects */
+        .nav-link {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #000000;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::before {
+            width: 100%;
+        }
+        
+        /* Hero Buttons Scroll Effects */
+        .btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary {
+            background: #000000;
+            color: #ffffff;
+            border: 1px solid #000000;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            letter-spacing: -0.01em;
+        }
+        
+        .btn-primary:hover {
+            background: #ffffff;
+            color: #000000;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #000000;
+            border: 1px solid #000000;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            letter-spacing: -0.01em;
+        }
+        
+        .btn-secondary:hover {
+            background: #000000;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* User Scroll Effects */
         .hero-stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
         }
         
         .stat-card {
             background: #ffffff;
-            border: 1px solid #000000;
+            border: 2px solid #000000;
             border-radius: 0;
-            padding: 1.5rem;
+            padding: 2rem;
             text-align: center;
-            transition: all 0.2s ease;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .stat-card:hover::before {
+            left: 100%;
         }
         
         .stat-card:hover {
             background: #000000;
             color: #ffffff;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
         }
         
         .stat-number {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 700;
             color: #000000;
             margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+            line-height: 1;
+            letter-spacing: -0.02em;
         }
         
         .stat-label {
             color: #000000;
-            font-size: 0.9rem;
-            font-weight: 500;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            line-height: 1.3;
         }
         
         .stat-card:hover .stat-number,
@@ -289,31 +407,38 @@
         
         .floating-element {
             background: #ffffff;
-            border: 1px solid #000000;
-            border-radius: 0;
-            padding: 1rem 1.5rem;
+            border: 2px solid #000000;
+            border-radius: 50px;
+            padding: 1rem 2rem;
             display: flex;
             align-items: center;
             gap: 0.75rem;
-            transition: all 0.2s ease;
+            transition: all 0.3s ease;
             position: relative;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
         
         .floating-element:hover {
             background: #000000;
             color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
         }
         
         .floating-element i {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             color: #000000;
+            transition: all 0.3s ease;
         }
         
         .floating-element span {
             color: #000000;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             letter-spacing: -0.01em;
+            transition: all 0.3s ease;
         }
         
         .floating-element:hover i,
@@ -498,7 +623,7 @@
         .hero {
             position: relative;
             z-index: 1;
-            margin-top: 100px;
+            margin-top: 120px;
         }
         
         .hero-content {
@@ -596,44 +721,44 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero visible">
         <div class="section-bg"></div>
         <div class="hero-content">
-            <div class="hero-text fade-in-up">
-                <h1 class="hero-title reveal-text">Dr. Rajeev Kumar Chauhan</h1>
-                <p class="hero-subtitle reveal-text">Assistant Professor | Power Systems Expert | Research Innovator</p>
-                <p class="hero-description reveal-text">
+            <div class="hero-text fade-in-up visible">
+                <h1 class="hero-title reveal-text visible">Dr. Rajeev Kumar Chauhan</h1>
+                <p class="hero-subtitle reveal-text visible">Assistant Professor | Power Systems Expert | Research Innovator</p>
+                <p class="hero-description reveal-text visible">
                     Leading researcher in DC Microgrids and Power Systems with 50+ publications 
                     and international research experience at University of Manchester, UK.
                 </p>
                 
                 <div class="hero-stats">
-                    <div class="stat-card stagger-item scale-in">
+                    <div class="stat-card stagger-item scale-in visible">
                         <div class="stat-number">50+</div>
                         <div class="stat-label">Publications</div>
                     </div>
-                    <div class="stat-card stagger-item scale-in">
+                    <div class="stat-card stagger-item scale-in visible">
                         <div class="stat-number">15+</div>
                         <div class="stat-label">Years Experience</div>
                     </div>
-                    <div class="stat-card stagger-item scale-in">
+                    <div class="stat-card stagger-item scale-in visible">
                         <div class="stat-number">6.7</div>
                         <div class="stat-label">Max Impact Factor</div>
                     </div>
-                    <div class="stat-card stagger-item scale-in">
+                    <div class="stat-card stagger-item scale-in visible">
                         <div class="stat-number">10+</div>
                         <div class="stat-label">Awards</div>
                     </div>
                 </div>
                 
-                <div class="hero-buttons reveal-text">
+                <div class="hero-buttons reveal-text visible">
                     <a href="#publications" class="btn btn-primary">View Publications</a>
                     <a href="#gallery" class="btn btn-secondary">Gallery</a>
                     <a href="#contact" class="btn btn-secondary">Get in Touch</a>
                 </div>
             </div>
             
-            <div class="hero-visual fade-in-right">
+            <div class="hero-visual fade-in-right visible">
                 <div class="tech-showcase">
                     <div class="floating-element">
                         <i class="fas fa-bolt"></i>
@@ -656,49 +781,49 @@
     </section>
 
     <!-- Overview Section -->
-    <section id="overview" class="about">
+    <section id="overview" class="about visible">
         <div class="section-bg"></div>
         <div class="container">
-            <h2 class="section-title fade-in-up">Professional Overview</h2>
+            <h2 class="section-title fade-in-up visible">Professional Overview</h2>
             <div class="about-content">
-                <div class="about-text fade-in-left">
-                    <p class="reveal-text">
+                <div class="about-text fade-in-left visible">
+                    <p class="reveal-text visible">
                         Dr. Rajeev Kumar Chauhan is a distinguished academic and researcher serving as 
                         Assistant Professor at Dayalbagh Educational Institute, Agra. With a robust 
                         background in electrical engineering and power systems, he has established himself 
                         as a leading expert in DC microgrids, renewable energy integration, and smart grid technologies.
                     </p>
-                    <p class="reveal-text">
+                    <p class="reveal-text visible">
                         His previous role as Research Scientist at the University of Manchester, United Kingdom, 
                         has provided him with international research exposure and collaborative experience. 
                         Dr. Chauhan's work focuses on developing innovative solutions for sustainable energy 
                         systems, with particular emphasis on DC microgrid architectures, building automation, 
                         and advanced power system control strategies.
                     </p>
-                    <p class="reveal-text">
+                    <p class="reveal-text visible">
                         As a Senior Member of IEEE and member of IACSIT, Singapore, he actively contributes 
                         to the academic community through peer review, editorial work, and conference organization. 
                         His research has been recognized with numerous prestigious awards including the POSOCO 
                         Power System Award and IEEE UP Section Young Professional Star Award.
                     </p>
                 </div>
-                <div class="about-highlights fade-in-right">
-                    <div class="highlight-item stagger-item">
+                <div class="about-highlights fade-in-right visible">
+                    <div class="highlight-item stagger-item visible">
                         <i class="fas fa-university"></i>
                         <h3>Current Position</h3>
                         <p>Assistant Professor<br>Dayalbagh Educational Institute</p>
                     </div>
-                    <div class="highlight-item stagger-item">
+                    <div class="highlight-item stagger-item visible">
                         <i class="fas fa-globe"></i>
                         <h3>International Experience</h3>
                         <p>Former Research Scientist<br>University of Manchester, UK</p>
                     </div>
-                    <div class="highlight-item stagger-item">
+                    <div class="highlight-item stagger-item visible">
                         <i class="fas fa-award"></i>
                         <h3>Key Recognition</h3>
                         <p>POSOCO Power System Award<br>IEEE Young Professional Star</p>
                     </div>
-                    <div class="highlight-item stagger-item">
+                    <div class="highlight-item stagger-item visible">
                         <i class="fas fa-users"></i>
                         <h3>Professional Memberships</h3>
                         <p>Senior Member IEEE<br>IACSIT Member</p>
@@ -980,12 +1105,12 @@
     </section>
 
     <!-- Professional Activities Section -->
-    <section id="professional-activities" class="professional-activities">
+    <section id="professional-activities" class="professional-activities visible">
         <div class="section-bg"></div>
         <div class="container">
-            <h2 class="section-title fade-in-up">Professional Activities & Committees</h2>
+            <h2 class="section-title fade-in-up visible">Professional Activities & Committees</h2>
             <div class="activities-grid">
-                <div class="activity-card stagger-item fade-in-left">
+                <div class="activity-card stagger-item fade-in-left visible">
                     <div class="activity-icon">
                         <i class="fas fa-users"></i>
                     </div>
@@ -998,7 +1123,7 @@
                     </ul>
                 </div>
                 
-                <div class="activity-card stagger-item fade-in-right">
+                <div class="activity-card stagger-item fade-in-right visible">
                     <div class="activity-icon">
                         <i class="fas fa-gavel"></i>
                     </div>
@@ -1011,7 +1136,7 @@
                     </ul>
                 </div>
                 
-                <div class="activity-card stagger-item fade-in-left">
+                <div class="activity-card stagger-item fade-in-left visible">
                     <div class="activity-icon">
                         <i class="fas fa-microscope"></i>
                     </div>
@@ -1024,7 +1149,7 @@
                     </ul>
                 </div>
                 
-                <div class="activity-card stagger-item fade-in-right">
+                <div class="activity-card stagger-item fade-in-right visible">
                     <div class="activity-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
@@ -1037,7 +1162,7 @@
                     </ul>
                 </div>
                 
-                <div class="activity-card stagger-item fade-in-left">
+                <div class="activity-card stagger-item fade-in-left visible">
                     <div class="activity-icon">
                         <i class="fas fa-industry"></i>
                     </div>
@@ -1050,7 +1175,7 @@
                     </ul>
                 </div>
                 
-                <div class="activity-card stagger-item fade-in-right">
+                <div class="activity-card stagger-item fade-in-right visible">
                     <div class="activity-icon">
                         <i class="fas fa-book"></i>
                     </div>
@@ -1141,14 +1266,14 @@
     <script>
         // Initialize Lenis smooth scrolling
         const lenis = new Lenis({
-            duration: 1.2,
+            duration: 2.0,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             direction: 'vertical',
             gestureDirection: 'vertical',
             smooth: true,
-            mouseMultiplier: 1,
+            mouseMultiplier: 0.8,
             smoothTouch: false,
-            touchMultiplier: 2,
+            touchMultiplier: 1.5,
             infinite: false,
         });
 
